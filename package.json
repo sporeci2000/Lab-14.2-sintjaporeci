@@ -4,10 +4,29 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sporeci2000/Lab-14.2-sintjaporeci.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sporeci2000/Lab-14.2-sintjaporeci/issues"
+  },
+  "homepage": "https://github.com/sporeci2000/Lab-14.2-sintjaporeci#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
