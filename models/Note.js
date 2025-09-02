@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
 // This is the model you will be modifying
 const noteSchema = new Schema({
@@ -15,10 +15,10 @@ const noteSchema = new Schema({
         type: Date,
         default: Date.now,
     },
-    author: {
-        type: Types.ObjectId, 
-        ref: 'User', 
-        required: true 
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
     }
 });
 
