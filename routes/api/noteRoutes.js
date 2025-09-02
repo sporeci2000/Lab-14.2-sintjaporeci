@@ -11,12 +11,15 @@ const isValidId = (id) => mongoose.Types.ObjectId.isValid(id);
 // GET /api/notes - Get all notes for the logged-in user
 // THIS IS THE ROUTE THAT CURRENTLY HAS THE FLAW
 router.get('/', async (req, res) => {
+    console.log('Logged-in user ID:', req.user._id);
     // This currently finds all notes in the database.
     // It should only find notes owned by the logged in user.
     try {
         const notes = await Note.find({ user: req.user._id });
+        console.log('Found notes:', notes);
         res.json(notes);
     } catch (err) {
+        console.error(err);
         res.status(500).json(err);
     }
 });
